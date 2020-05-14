@@ -1,0 +1,328 @@
+@import 'mixins.less';
+
+@font-face {
+    font-family: "Montserrat Regular";
+    src: url(/assets/font/Montserrat-Regular.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: "Montserrat SemiBold";
+    src: url(/assets/font/Montserrat-SemiBold.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: "Montserrat Bold";
+    src: url(/assets/font/Montserrat-Bold.ttf) format("opentype");
+}
+
+body {
+    font-family: 'Montserrat Regular',Arial,Helvetica,sans-serif;
+    padding: 0!important;
+    margin: 0!important;
+    font-size: 14px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    background: #FFF;
+    overflow-y: auto;
+}
+
+.container-fluid, .container {
+    height: 100%;
+}
+
+.container-fluid {
+    .display-flex;
+}
+
+.container {
+    padding: 0;
+}
+
+a {
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+h1 {
+    font-family: "Montserrat SemiBold";
+}
+
+h2 {
+    font-family: "Montserrat SemiBold";
+    font-size: 2em;
+}
+
+.title {
+    font-family: "Montserrat Bold";
+    font-size: 3.6em;
+    color: @colorMain;
+    &.padding {
+        padding: 80px 0 60px 0;
+        @media (max-width: @screen-sm) {
+            padding: 40px 10px 40px 10px;
+        }
+    }
+    @media (max-width: @screen-sm) {
+        font-size: 2.5em;
+    }
+}
+
+.subtitle {
+    font-family: "Montserrat SemiBold";
+    color: @colorMain;
+    font-size: 3.6em;
+    line-height: 1.2em;
+    @media (max-width: @screen-md) {
+        font-size: 2.5em;
+    }
+}
+
+.full-viewport-width {
+    width: 99.8vw !important;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+// ------------------------------------------------------------------------------------------------------------------------------------
+// SLIDER
+// ------------------------------------------------------------------------------------------------------------------------------------
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-slide{
+    &:focus,
+    &:visited,
+    &:active{
+        outline: none !important;
+    }
+}
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+    &:focus {
+        outline: none;
+    }
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    .transform(translate3d(0,
+    0,
+    0));
+}
+
+.slick-track {
+    position: relative;
+    left: -150px;
+    top: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+    .slick-loading & {
+        visibility: hidden;
+    }
+    @media (max-width: @screen-lg) {
+        left: 0;
+    }
+}
+
+@media (max-width: @screen-md) {
+    .slick-center {
+        margin-left: 130px!important;
+    }
+}
+@media (max-width: @screen-sm) {
+    .slick-center {
+        margin-left: 15px!important;
+    }
+}
+
+.slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    [dir="rtl"] & {
+        float: right;
+    }
+    img {
+        display: block;
+    }
+    &.slick-loading img {
+        display: none;
+    }
+    display: none;
+    &.dragging img {
+        pointer-events: none;
+    }
+    .slick-initialized & {
+        display: block;
+    }
+    .slick-loading & {
+        visibility: hidden;
+    }
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+}
+
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+// Slick Controls
+.slick-arrow {
+    .square(48px);
+    border: none;
+    background-color: #FFF;
+    position: absolute;
+    width: 45px;
+    max-width: 45px;
+    height: 146px;
+    top: 73px;
+    background-color: rgba(255, 255, 255, 0.56);
+    z-index: 9;
+    &.icon-arrow-2:before {
+        display: block;
+        font-size: 12px;
+        color: #EEE;
+        content: "";
+    }
+    &.slick-prev {
+        left: 0;
+    }
+    &.slick-next {
+        right: 0;
+        img {
+            .transform(scaleX(-1));
+        }
+    }
+}
+
+// slick dots
+.slick-dots {
+    text-align: center;
+    li {
+        display: inline-block;
+        margin: 0 4px;
+        button {
+            .circle-shape(8px);
+            font-size: 0;
+            border: none;
+            background-color: #aaa;
+            padding: 4px;
+            &:before {
+                content: "";
+            }
+            @media (max-width: @screen-md) {
+                padding: 7px;
+            }
+            @media (max-width: @screen-sm) {
+                padding: 4px;
+            }
+        } // active
+        &.slick-active {
+            width: 52px;
+        }
+        &.slick-active button {
+            background-color: #676767;
+            width: 45px;
+            border-radius: 25px;
+        }
+    }
+}
+
+// circle arrows controls
+.circle-arrows {
+    .slick-arrow {
+        .circle-shape(32px);
+        .outer-box-shadow(-1px 2px 10px rgba(0,
+        0,
+        0,
+        0.15));
+        top: auto;
+        bottom: -8px; 
+        // icon
+        &.icon-arrow-2:before {
+            display: block; //&:extend(.micro-font);
+            font-size: 8px;
+            color: #AAA;
+        } // controls left/right
+        &.slick-prev {
+            left: 42%;
+        }
+        &.slick-next {
+            right: 42%;
+        }
+    }
+    .slick-dots {
+        margin-top: 36px;
+    }
+}
+
+.dropdown-menu {
+    padding: 0;
+    .outer-box-shadow(0px 5px 10px @colorGrayHover);
+    border: none;
+    top: 5px!important;
+    &.order-filter {
+        left: -60px!important;
+        @media (max-width: @screen-sm) {
+            left: 0!important;
+        }
+    }
+    .dropdown-item {
+        font-size: 0.65em;
+        padding: 10px 15px;
+        border-bottom: 1px solid @colorGray;
+        &:first-child {
+            padding-top: 12px;
+            .border-radius(.25rem 0.25rem 0 0);
+        }
+        &:last-child {
+            padding-top: 12px;
+            .border-radius(0 0 .25rem 0.25rem);
+        }  
+    }
+}

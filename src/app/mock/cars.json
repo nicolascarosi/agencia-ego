@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "model_name": "Etios",
+        "model_year": "2019",
+        "price": 815900,
+        "category": "autos",
+        "img": "etios.jpg"
+    },
+    {
+        "id": 2,
+        "model_name": "Yaris",
+        "model_year": "2020",
+        "price": 1038900,
+        "category": "autos",
+        "img": "yaris.jpg"
+    },
+    {
+        "id": 3,
+        "model_name": "Corolla",
+        "model_year": "2018",
+        "price": 1430700,
+        "category": "autos",
+        "img": "corolla.jpg"
+    },
+    {
+        "id": 4,
+        "model_name": "Prius",
+        "model_year": "2019",
+        "price": 2882000,
+        "category": "autos",
+        "img": "prius-1.jpg"
+    },
+    {
+        "id": 5,
+        "model_name": "Camry",
+        "model_year": "2018",
+        "price": 3753200,
+        "category": "autos",
+        "img": "camry.jpg"
+    },
+    {
+        "id": 6,
+        "model_name": "Toyota 86",
+        "model_year": "2019",
+        "price": 3812100,
+        "category": "autos",
+        "img": "toyota-86.jpg"
+    },
+    {
+        "id": 7,
+        "model_name": "Innova",
+        "model_year": "2020",
+        "price": 2596400,
+        "category": "SUVs y Crossovers",
+        "img": "innova.jpg"
+    },
+    {
+        "id": 8,
+        "model_name": "SW4",
+        "model_year": "2019",
+        "price": 3236200,
+        "category": "SUVs y Crossovers",
+        "img": "sw-4.jpg"
+    },
+    {
+        "id": 9,
+        "model_name": "RAV4",
+        "model_year": "2019",
+        "price": 3170200,
+        "category": "SUVs y Crossovers",
+        "img": "rav-4.jpg"
+    },
+    {
+        "id": 10,
+        "model_name": "Land Cruiser Prado",
+        "model_year": "2017",
+        "price": 815900,
+        "category": "SUVs y Crossovers",
+        "img": "prado.jpg"
+    },
+    {
+        "id": 11,
+        "model_name": "Land Cruiser 200",
+        "model_year": "2018",
+        "price": 7873100,
+        "category": "SUVs y Crossovers",
+        "img": "cruiser.jpg"
+    },
+    {
+        "id": 12,
+        "model_name": "Hilux",
+        "model_year": "2020",
+        "price": 1507000,
+        "category": "Pickups y Comerciales",
+        "img": "hilux.jpg"
+    }
+]

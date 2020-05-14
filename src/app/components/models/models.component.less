@@ -1,0 +1,44 @@
+@import 'mixins.less';
+
+.models {
+    margin-top: 70px;
+    .display-grid;
+    .grid-template-columns(1fr 1fr 1fr 1fr);
+    grid-gap: 50px 0;
+    text-align: center;
+    .models-container {
+        cursor: pointer;
+        &:active {
+            outline: none;
+        }
+        .btn-model {
+            padding: 8px 35px;
+            .border-radius(50px);
+            background-color: #000;
+            color: #fff;
+            font-size: 0.9em;
+            visibility: visible;
+            visibility: hidden;
+            @media (max-width: @screen-sm) {
+                display: none;
+            }
+         }
+        &:hover {
+            .btn-model {
+                visibility: visible;
+            }
+            h2 {
+                color: @colorRed;
+            }
+        }
+    }
+    @media (max-width: @screen-lg) {
+        .grid-template-columns(1fr 1fr 1fr);
+    }
+    @media (max-width: @screen-md) {
+        .grid-template-columns(1fr 1fr);
+    }
+    @media (max-width: @screen-sm) {
+        .grid-template-columns(1fr);
+    }
+}

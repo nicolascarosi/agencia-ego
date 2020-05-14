@@ -1,0 +1,100 @@
+@import 'mixins.less';
+
+.header {
+    height: 70px;
+    @media (max-width: @screen-md) {
+        height: 100px;
+    }
+    @media (max-width: @screen-sm) {
+        height: 70px;
+    }
+    .logo {
+        position: absolute;
+        top: 15px;
+        left: 30px;
+        @media (max-width: @screen-md) {
+            width: 100px;
+            padding: 15px;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        @media (max-width: @screen-sm) {
+            width: 80px;
+            padding: 16px 1px;
+        }
+    }
+    ul {
+        .display-flex;
+        height: 100%;
+        li {
+            padding: 0 35px;
+            .display-flex;
+            .align-items(center);
+            height: 100%;
+            font-family: "Montserrat SemiBold";
+            cursor: pointer;
+            &:active {
+                outline: none;
+            }
+            &.active {
+                .outer-box-shadow(0px -4px 0px inset @colorRed);
+                color: @colorRed;
+            }
+            &:hover {
+                color: @colorRed;
+            }
+        }
+        @media (max-width: @screen-md) {
+            display: none;
+        }
+    }
+    .menu-item {
+        .display-flex;
+        .align-items(center);
+        position: absolute;
+        top: 25px;
+        right: 30px;
+        cursor: pointer;
+        span {
+            padding-right: 10px;
+            line-height: 1.1em;
+            @media (max-width: @screen-md) {
+                display: none;
+            }
+        }
+        &:hover {
+            color: @colorRed;
+        }
+        @media (max-width: @screen-md) {
+            position: relative;
+            top: 0;
+            right: 30px;
+        } 
+        @media (max-width: @screen-sm) {
+            right: 0px;
+        }  
+        img {
+            @media (max-width: @screen-md) {
+                width: 50px;
+            }
+            @media (max-width: @screen-sm) {
+                width: 30px;
+            }
+        }
+    }
+    .main-header {
+        border-bottom: 1px solid @colorGray;
+        background-color: #FFF;
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        height: 70px;
+        @media (max-width: @screen-md) {
+            height: 100px;
+        }
+        @media (max-width: @screen-sm) {
+            height: 70px;
+        }
+    }
+}

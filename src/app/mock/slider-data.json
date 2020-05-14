@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Nuevos motores Toyota",
+        "description": "Dos alternativas diesel con turbo de geometría variable, 1GD (2.8 L) y 2GD (2.4 L).",
+        "img": "motor.jpg"
+    },
+    {
+        "title": "Suspensión mejorada",
+        "description": "Mayor confort de marcha, estabilidad y capacidad Off Road.",
+        "img": "suspension.jpg"
+    },
+    {
+        "title": "Transmisión automática",
+        "description": "Posibilidad de elección de caja automática de  manejo.",
+        "img": "transmision-automatica.jpg"
+    },
+    {
+        "title": "Transmisión manual",
+        "description": "Posibilidad de elección de caja automática de  manejo.",
+        "img": "transmision-manual.jpg"
+    },
+    {
+        "title": "Suspensión mejorada",
+        "description": "Mayor confort de marcha, estabilidad y capacidad Off Road.",
+        "img": "suspension.jpg"
+    }
+]

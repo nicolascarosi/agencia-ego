@@ -1,0 +1,64 @@
+@import 'mixins.less';
+
+.filter {
+    .display-flex;
+    .justify-content(space-between);
+    .align-items(center);
+    border-bottom: 1px solid @colorGray;
+    padding-bottom: 5px;
+    span {
+        font-family: "Montserrat SemiBold";
+        padding: 10px 0;
+    }
+    @media (max-width: @screen-sm) {
+        padding: 10px 0;
+        margin: 0 10px;
+    }
+    .filter-title, .order-by {
+        width: 13%;
+        color: @colorMain;
+        @media (max-width: @screen-md) {
+            width: auto;
+        }
+    }
+    .dropdown-toggle {
+        color: @colorMain;
+        text-decoration: none;
+        &:hover {
+            color: @colorRed;
+        }
+        &:after {
+            position: relative;
+            top: 2px;
+        }
+    }
+    .filter-title {
+        @media (max-width: @screen-md) {
+            display: none;
+        }
+    }
+    .filter-options {
+        width: 100%;
+        ul {
+            .display-flex;
+            li {
+                padding: 5px 15px;
+                .border-radius(60px);
+                margin-right: 35px;
+                cursor: pointer;
+                &.active, &:hover {
+                    background-color: @colorLightGray;
+                }
+            }
+        }
+        @media (max-width: @screen-md) {
+            display: none;
+        }
+        &.mobile {
+            display: none;
+            @media (max-width: @screen-md) {
+                display: block;
+            }
+        }
+    }
+}

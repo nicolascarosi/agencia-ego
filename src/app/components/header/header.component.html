@@ -1,0 +1,18 @@
+<section class="header">
+    <div class="container-fluid main-header">
+        <img class="logo" src="/assets/images/logo.svg" alt="Ego" />
+        <div class="container">
+            <ul>
+                <li routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Modelos</li>
+                <li routerLink="/ficha-tecnica" routerLinkActive="active">Ficha de modelo</li>
+            </ul>
+        </div>
+        <div class="menu-item" (click)="toggleMenu(true)">
+            <span>Menú</span>
+            <img src="/assets/images/gray.svg" alt="Menu" />
+        </div>
+    </div>
+    <div class="container-fluid">
+        <app-menu [expanded]="menuExpanded" (changeMenu)="toggleMenu(false)"></app-menu>
+    </div>
+</section>

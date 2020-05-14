@@ -1,0 +1,40 @@
+@import 'mixins.less';
+
+.data-sheet-main {
+    .display-grid;
+    .grid-template-columns(1fr 1fr);
+    grid-gap: 106px;
+    margin: 100px 0 70px 0;
+    .left-container {
+        p {
+            max-width: 90%;
+            font-size: 1.2em;
+            padding-top: 50px;
+            @media (max-width: @screen-md) {
+                max-width: 100%;
+            }
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .right-container {
+        @media (max-width: @screen-md) {
+            margin: 0 auto;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    @media (max-width: @screen-md) {
+        .grid-template-columns(1fr);
+        font-size: 2em;
+    }
+    @media (max-width: @screen-sm) {
+        font-size: 1em;
+        padding: 0 20px;
+    }
+}

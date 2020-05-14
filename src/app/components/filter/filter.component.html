@@ -1,0 +1,39 @@
+<section class="filter">
+    <div class="filter-title">
+        <span>Filtrar por</span>
+    </div>
+    <div class="filter-options">
+        <ul>
+            <li [ngClass]='{"active": selectedCategory == "todos"}' (click)="filterByCategory('todos')">Todos</li>
+            <li [ngClass]='{"active": selectedCategory == "autos"}' (click)="filterByCategory('autos')">Autos</li>
+            <li [ngClass]='{"active": selectedCategory == "Pickups y Comerciales"}' (click)="filterByCategory('Pickups y Comerciales')">Pickups y Comerciales</li>
+            <li [ngClass]='{"active": selectedCategory == "SUVs y Crossovers"}' (click)="filterByCategory('SUVs y Crossovers')">SUVs y Crossovers</li>
+        </ul>
+    </div>
+    <div class="filter-options mobile">
+        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span>Filtrar por</span>
+        </a>
+
+        <div class="dropdown-menu order-filter" aria-labelledby="dropdownMenuFilter">
+            <a class="dropdown-item" href="#" (click)="filterByCategory('todos')">Todos</a>
+            <a class="dropdown-item" href="#" (click)="filterByCategory('autos')">Autos</a>
+            <a class="dropdown-item" href="#" (click)="filterByCategory('Pickups y Comerciales')">Pickups y Comerciales</a>
+            <a class="dropdown-item" href="#" (click)="filterByCategory('SUVs y Crossovers')">SUVs y Crossovers</a>
+        </div>
+    </div>
+    <div class="order-by">
+        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span>Ordenar por</span>
+        </a>
+
+        <div class="dropdown-menu order-filter" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="#" (click)="filterByOrder('nada')">Nada</a>
+            <a class="dropdown-item" href="#" (click)="filterByOrder('menor a mayor')">De <strong>menor</strong> a <strong>mayor</strong> precio</a>
+            <a class="dropdown-item" href="#" (click)="filterByOrder('mayor a menor')">De <strong>mayor</strong>  a <strong>menor</strong> precio</a>
+            <a class="dropdown-item" href="#" (click)="filterByOrder('nuevos')">Más <strong>nuevos</strong> primero</a>
+            <a class="dropdown-item" href="#" (click)="filterByOrder('viejos')">Más <strong>viejos</strong> primero</a>
+        </div>
+    </div>
+    
+</section>
