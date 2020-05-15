@@ -7,9 +7,9 @@
     position: fixed;
     z-index: 50;
     background-color: rgba(0, 0, 0, 0.5);
-    .opacity(0);
-    display: none;
-    .transition(opacity 250ms ease-in-out);
+    visibility: hidden;  
+    .opacity(0);  
+    .transition(opacity 200ms ease-in-out);
     .menu-container {
         padding-top: 70px;
         width: 390px;
@@ -18,8 +18,9 @@
         right: 0;
         top: 0;
         background-color: #FFF;
+        visibility: hidden;  
         .transform(translateX(390px));
-        transition: transform 250ms ease-in-out;
+        .transition(transform 250ms ease-in-out);
         @media (max-width: @screen-md) {
             overflow: auto;
             padding-top: 100px;
@@ -65,10 +66,34 @@
     &.active {
         .opacity(1);
         display: block;
-        .transition(opacity 250ms ease-in-out);
+        .transition(opacity 200ms ease-in-out);
+        visibility: visible;
         .menu-container {
+            visibility: visible;
             .transform(translateX(0));
             .transition(transform 250ms ease-in-out);
         }
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    80% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
     }
 }
