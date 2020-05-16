@@ -15,8 +15,8 @@ export class SliderComponent  {
     slidesToScroll: 1,
     arrows: true,
     infinite: true,
-    prevArrow: "<button type='button' class='slick-prev icon-arrow-2 arrow-left' id='btn_banner_home_previous'><img src='/assets/images/arrow.svg' /></button>",
-    nextArrow: "<button type='button' class='slick-next icon-arrow-2 arrow-right' id='btn_banner_home_next'><img src='/assets/images/arrow.svg' /></button>",
+    prevArrow: "<button type='button' class='slick-prev icon-arrow-2 arrow-left' id='btn_banner_home_previous'><img src='assets/images/arrow.svg' /></button>",
+    nextArrow: "<button type='button' class='slick-next icon-arrow-2 arrow-right' id='btn_banner_home_next'><img src='assets/images/arrow.svg' /></button>",
     dots: true,
     centerMode: true,
     // centerPadding: '20px',
@@ -29,8 +29,8 @@ export class SliderComponent  {
           arrows: false,
           centerMode: true,
           slidesToShow: 3,
-          prevArrow: "<button type='button' class='slick-prev icon-arrow-2 arrow-left' id='btn_banner_home_previous'><img src='/assets/images/arrow.svg' /></button>",
-          nextArrow: "<button type='button' class='slick-next icon-arrow-2 arrow-right' id='btn_banner_home_next'><img src='/assets/images/arrow.svg' /></button>",
+          prevArrow: "<button type='button' class='slick-prev icon-arrow-2 arrow-left' id='btn_banner_home_previous'><img src='assets/images/arrow.svg' /></button>",
+          nextArrow: "<button type='button' class='slick-next icon-arrow-2 arrow-right' id='btn_banner_home_next'><img src='assets/images/arrow.svg' /></button>",
         }
       },
       {
