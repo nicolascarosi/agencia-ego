@@ -38,7 +38,7 @@ npm install -g @angular/cli
 npm install
 ```
 	
-5. Correr el siguiente comando para iniciar la aplicación:
+4. Correr el siguiente comando para iniciar la aplicación:
 
 ```
 ng serve -o
